@@ -18,7 +18,7 @@ class User {
   @Column({ type: "varchar", length: 45, unique: true })
   email: string;
 
-  @Column({ type: "boolean" })
+  @Column({ type: "boolean", default: false })
   admin: boolean;
 
   @Column({ type: "varchar", length: 120 })

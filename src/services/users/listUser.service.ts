@@ -10,6 +10,5 @@ export const listUsersService = async (): Promise<IAllUsersReturn> => {
   const findUsers: Array<User> = await userRepository.find();
 
   const users = returnAllUserSchema.parse(findUsers);
-
   return users;
 };

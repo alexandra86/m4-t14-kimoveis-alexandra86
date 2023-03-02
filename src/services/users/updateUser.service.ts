@@ -13,7 +13,7 @@ export const updateUserService = async (
   id: number
 ): Promise<IUserReturn> => {
   if (Object.keys(newUserData).length === 0) {
-    throw new AppError("invalid data!", 404);
+    throw new AppError("invalid data!", 400);
   }
 
   const userRepository: iUserRepo = AppDataSource.getRepository(User);
@@ -24,13 +24,11 @@ export const updateUserService = async (
 
   const user = userRepository.create({
     ...oldUserData,
-
     ...newUserData,
   });
 
   await userRepository.save(user);
 
   const updatedUser = returnUserSchema.parse(user);
-  console.log(updatedUser);
   return updatedUser;
 };

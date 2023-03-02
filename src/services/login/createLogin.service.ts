@@ -17,13 +17,13 @@ export const createLoginService = async (
   });
 
   if (!user) {
-    throw new AppError("jwt malformed", 401);
+    throw new AppError("Invalid credentials", 401);
   }
 
   const passwordMatch = await compare(loginData.password, user.password);
 
   if (!passwordMatch) {
-    throw new AppError("jwt malformed", 401);
+    throw new AppError("Invalid credentials", 401);
   }
 
   const token: string = jwt.sign(

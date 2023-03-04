@@ -4,7 +4,10 @@ import { ensureDataIsValidMiddleware } from "../middlewares/ensureDataIsValid.mi
 import { ensureNameCategoryExistsMiddleware } from "../middlewares/ensureNameCategoryExists.middleware";
 import { ensureIsAdminValidMiddleware } from "../middlewares/ensureIsAdminValid.middleware";
 import { ensureTokenIsValidMiddleware } from "../middlewares/ensureTokenIsValid.middleware";
-import { createCategoryController } from "../controllers/categories.controllers";
+import {
+  createCategoryController,
+  listCategoriesController,
+} from "../controllers/categories.controllers";
 
 export const categoryRoutes: Router = Router();
 
@@ -16,3 +19,5 @@ categoryRoutes.post(
   ensureNameCategoryExistsMiddleware,
   createCategoryController
 );
+
+categoryRoutes.get("", listCategoriesController);

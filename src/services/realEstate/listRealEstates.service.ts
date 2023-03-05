@@ -17,7 +17,7 @@ export const listRealEstatesService =
       },
     });
 
-    // const realEstates = returnAllRealEstateSchema.parse(realEstateFind);
+    const realEstates = returnAllRealEstateSchema.parse(realEstateFind);
 
-    return realEstateFind;
+    return realEstates;
   };

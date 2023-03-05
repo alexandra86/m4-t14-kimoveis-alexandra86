@@ -20,4 +20,6 @@ export const returnRealEstateSchema = z.object({
   category: returnCategoriesSchema,
 });
 
-export const returnAllRealEstateSchema = returnRealEstateSchema.array();
+export const returnAllRealEstateSchema = returnRealEstateSchema
+  .partial()
+  .array();

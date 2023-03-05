@@ -1,15 +1,17 @@
 import { AppDataSource } from "../../data-source";
 import { Address, Category, RealEstate } from "../../entities";
 import {
-  IRealEstate,
+  ICreateRealEstate,
   IRealEstateRepo,
+  IRealEstateReturn,
 } from "../../interfaces/realEstate.interface";
 import { IAddressRepo } from "../../interfaces/address.interfaces";
 import { ICategoryRepo } from "../../interfaces/categories.interfaces";
 import { AppError } from "../../errors";
+import { returnRealEstateSchema } from "../../schemas/realEstate.schemas";
 export const createRealEstateService = async (
-  realEstateData: IRealEstate
-): Promise<any> => {
+  realEstateData: ICreateRealEstate
+): Promise<IRealEstateReturn> => {
   const addressRepository: IAddressRepo = AppDataSource.getRepository(Address);
 
   const categoryRepository: ICategoryRepo =
@@ -35,5 +37,10 @@ export const createRealEstateService = async (
     address: address,
     category: categoryFind,
   });
-  return realEstate;
+
+  await realEstateRepository.save(realEstate);
+
+  const newrealEstate = returnRealEstateSchema.parse(realEstate);
+
+  return newrealEstate;
 };

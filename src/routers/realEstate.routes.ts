@@ -1,14 +1,17 @@
 import { Router } from "express";
-import { createRealEstateController } from "../controllers/realEstate.controllers";
+import {
+  createRealEstateController,
+  listRealEstateController,
+} from "../controllers/realEstate.controllers";
 import { ensureAddressExistsMiddleware } from "../middlewares/ensureAddressExists.middleware";
 import { ensureDataIsValidMiddleware } from "../middlewares/ensureDataIsValid.middleware";
 import { ensureIsAdminValidMiddleware } from "../middlewares/ensureIsAdminValid.middleware";
 import { ensureTokenIsValidMiddleware } from "../middlewares/ensureTokenIsValid.middleware";
 import { createRealEstateSchema } from "../schemas/realEstate.schemas";
 
-export const RealEstateRoutes: Router = Router();
+export const realEstateRoutes: Router = Router();
 
-RealEstateRoutes.post(
+realEstateRoutes.post(
   "",
   ensureTokenIsValidMiddleware,
   ensureIsAdminValidMiddleware,
@@ -16,3 +19,5 @@ RealEstateRoutes.post(
   ensureDataIsValidMiddleware(createRealEstateSchema),
   createRealEstateController
 );
+
+realEstateRoutes.get("", listRealEstateController);

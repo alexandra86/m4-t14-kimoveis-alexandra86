@@ -7,6 +7,7 @@ import { ensureTokenIsValidMiddleware } from "../middlewares/ensureTokenIsValid.
 import {
   createCategoryController,
   listCategoriesController,
+  retrieveCategoriesByRealEstateController,
 } from "../controllers/categories.controllers";
 
 export const categoryRoutes: Router = Router();
@@ -21,3 +22,5 @@ categoryRoutes.post(
 );
 
 categoryRoutes.get("", listCategoriesController);
+
+categoryRoutes.get("/:id/realEstate", retrieveCategoriesByRealEstateController);

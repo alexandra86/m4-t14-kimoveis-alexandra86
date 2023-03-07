@@ -1,11 +1,10 @@
 import { AppDataSource } from "../../data-source";
 import { RealEstate, Schedule } from "../../entities";
 import { AppError } from "../../errors";
-import { IScheduleByRealEstate } from "../../interfaces/schedule.interfaces";
 
 export const listScheduleByRealEstateService = async (
   id: number
-): Promise<any> => {
+): Promise<RealEstate> => {
   const realEstateRepository = AppDataSource.getRepository(RealEstate);
   const realEstateFind = await realEstateRepository.findOne({
     where: {
@@ -25,5 +24,5 @@ export const listScheduleByRealEstateService = async (
     .where("realEstate.id = :id", { id })
     .getOne();
 
-  return findScheduleRealEstate;
+  return findScheduleRealEstate!;
 };

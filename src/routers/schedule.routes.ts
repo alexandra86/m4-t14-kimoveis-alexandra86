@@ -1,5 +1,8 @@
 import { Router } from "express";
-import { createScheduleController } from "../controllers/schedule.controllers";
+import {
+  createScheduleController,
+  listScheduleByRealEstateController,
+} from "../controllers/schedule.controllers";
 import { ensureDataIsValidMiddleware } from "../middlewares/ensureDataIsValid.middleware";
 import { ensureIsAdminValidMiddleware } from "../middlewares/ensureIsAdminValid.middleware";
 import { ensureTokenIsValidMiddleware } from "../middlewares/ensureTokenIsValid.middleware";
@@ -14,4 +17,11 @@ scheduleRoutes.post(
   ensureUserExistsMiddleware,
   ensureDataIsValidMiddleware(createScheduleSchema),
   createScheduleController
+);
+
+scheduleRoutes.get(
+  "/realEstate/:id",
+  ensureTokenIsValidMiddleware,
+  ensureIsAdminValidMiddleware,
+  listScheduleByRealEstateController
 );

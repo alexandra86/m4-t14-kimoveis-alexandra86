@@ -5,7 +5,7 @@ import {
   createRealEstateSchema,
   returnAllRealEstateSchema,
   returnRealEstateSchema,
-} from "../schemas/realEstate.schemas";
+} from "../schemas/realEstate.schema";
 
 export type ICreateRealEstate = z.infer<typeof createRealEstateSchema>;
 export type IRealEstateReturn = z.infer<typeof returnRealEstateSchema>;

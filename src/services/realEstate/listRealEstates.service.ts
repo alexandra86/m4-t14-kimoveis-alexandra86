@@ -4,7 +4,7 @@ import {
   IAllRealEstateReturn,
   IRealEstateRepo,
 } from "../../interfaces/realEstate.interface";
-import { returnAllRealEstateSchema } from "../../schemas/realEstate.schemas";
+import { returnAllRealEstateSchema } from "../../schemas/realEstate.schema";
 
 export const listRealEstatesService =
   async (): Promise<IAllRealEstateReturn> => {

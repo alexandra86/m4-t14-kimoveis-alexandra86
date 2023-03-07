@@ -7,7 +7,7 @@ import { ensureAddressExistsMiddleware } from "../middlewares/ensureAddressExist
 import { ensureDataIsValidMiddleware } from "../middlewares/ensureDataIsValid.middleware";
 import { ensureIsAdminValidMiddleware } from "../middlewares/ensureIsAdminValid.middleware";
 import { ensureTokenIsValidMiddleware } from "../middlewares/ensureTokenIsValid.middleware";
-import { createRealEstateSchema } from "../schemas/realEstate.schemas";
+import { createRealEstateSchema } from "../schemas/realEstate.schema";
 
 export const realEstateRoutes: Router = Router();
 

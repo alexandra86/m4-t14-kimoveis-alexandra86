@@ -31,7 +31,7 @@ export const retrieveCategoriesByRealEstateController = async (
   request: Request,
   response: Response
 ) => {
-  const idCategory = parseInt(request.params.id);
+  const idCategory: number = parseInt(request.params.id);
   const categoryRealEstate: ICategoryRealEstate =
     await retrieveCategoriesByRealEstateService(idCategory);
   return response.json(...categoryRealEstate);

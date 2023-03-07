@@ -8,7 +8,7 @@ import {
 import { IAddressRepo } from "../../interfaces/address.interfaces";
 import { ICategoryRepo } from "../../interfaces/categories.interfaces";
 import { AppError } from "../../errors";
-import { returnRealEstateSchema } from "../../schemas/realEstate.schemas";
+import { returnRealEstateSchema } from "../../schemas/realEstate.schema";
 export const createRealEstateService = async (
   realEstateData: ICreateRealEstate
 ): Promise<IRealEstateReturn> => {

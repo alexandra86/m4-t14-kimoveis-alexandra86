@@ -13,7 +13,7 @@ export const ensureUserExistsMiddleware = async (
 
   const userFind = await userRepository.findOne({
     where: {
-      id: parseInt(request.params.id),
+      id: parseInt(request.params.id) || parseInt(request.user.id),
     },
   });
 

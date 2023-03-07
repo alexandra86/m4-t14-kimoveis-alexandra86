@@ -3,7 +3,6 @@ import {
   Column,
   PrimaryGeneratedColumn,
   ManyToOne,
-  OneToMany,
   JoinColumn,
 } from "typeorm";
 import { RealEstate } from "./realEstate.entity";

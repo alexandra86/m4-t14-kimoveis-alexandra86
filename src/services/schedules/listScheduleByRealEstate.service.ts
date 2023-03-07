@@ -25,7 +25,5 @@ export const listScheduleByRealEstateService = async (
     .where("realEstate.id = :id", { id })
     .getOne();
 
-  console.log(findScheduleRealEstate);
-
   return findScheduleRealEstate;
 };

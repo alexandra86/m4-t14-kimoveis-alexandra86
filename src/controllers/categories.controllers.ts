@@ -4,8 +4,8 @@ import {
   ICategoryRealEstate,
 } from "../interfaces/categories.interfaces";
 import { createCategoryService } from "../services/categories/createCategory.service";
-import { listCategoriesService } from "../services/categories/readCategory.service";
-import { retrieveCategoriesByRealEstateService } from "../services/categories/retrieveCategoriesRealEstate.service";
+import { listCategoriesService } from "../services/categories/listCategory.service";
+import { retrieveCategoriesByRealEstateService } from "../services/categories/retrieveCategoriesByRealEstate.service";
 
 export const createCategoryController = async (
   request: Request,

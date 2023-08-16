@@ -15,6 +15,10 @@ Projeto final do módulo 4, do curso de Desenvolvedora Web Full Stack, da Kenzie
 
 <h2 font-family="pattaya">Requisitos técnicos:</h2><br>
 
+## Diagrama DER da API, referentes as tabelas usadas na aplicação e seus relacionamentos no banco de dados.
+
+![DER](/Klmóveis.png)
+
 Para inciar este projeto, é necessário instalar as dependências, que serão utilizadas nos testes. Portanto utilize o comando abaixo para instalar tais dependências:
 
 ```bash

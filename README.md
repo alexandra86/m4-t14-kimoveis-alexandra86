@@ -1,4 +1,19 @@
+
 # 🏁 Projeto Final: KImóveis - TypeORM com Relacionamentos
+
+<h2 font-family="pattaya">Tecnologias utilizadas</h2>
+<div style="display: inline_block"><br>
+ <img align="center" alt="Alexandra-Node" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+ <img align="center" alt="Alexandra-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
+ <img align="center" alt="Alexandra-postgreSQL" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"> 
+</div><br>
+
+<h2 font-family="pattaya">Descrição</h2><br>
+<p font-family="robotto" font-size="16px" line-height="34px" align="justify">
+Projeto final do módulo 4, do curso de Desenvolvedora Web Full Stack, da Kenzie Academy Brasil. É uma API, responsável por gerenciar uma imobiliária utilizando TypeORM e tabelas relacionais. Utiliza Node, com Express e PostgreSQL, como banco de dados.
+</p><br>
+
+<h2 font-family="pattaya">Requisitos técnicos:</h2><br>
 
 Para inciar este projeto, é necessário instalar as dependências, que serão utilizadas nos testes. Portanto utilize o comando abaixo para instalar tais dependências:
 
